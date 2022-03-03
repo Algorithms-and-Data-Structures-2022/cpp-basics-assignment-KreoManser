@@ -33,22 +33,25 @@ namespace assignment {
 
   // Task 5
   int arr_sum(int *arr, int length) {
-    int Summa = 0;
-    for(int i = 0; i < length; i++) {
-      Summa += arr[i];
+    if (arr != nullptr && length > 0) {
+      int summ = 0;
+      for (int i = 0; i < length; i++) {
+        summ += arr[i];
+      }
+      return summ;
     }
-    return Summa;
+    return 0;
   }
 
   // Task 6
   int *find_max_elem(int *arr, int length) {
-    int Max = arr[0];
-    for (int i = 0; i < length; i++) {
-      if (Max < arr[i]) {
-        Max = arr[i];
+    if (arr != nullptr && length > 0) {
+      int *max = 0;
+      for (int i = 0; i < length; i++) {
+        max = &arr[i];
       }
+      return max;
     }
-
     return nullptr;
   }
 
