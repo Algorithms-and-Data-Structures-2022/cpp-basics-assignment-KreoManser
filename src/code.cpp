@@ -19,22 +19,17 @@ namespace assignment {
 
   // Task 3
   int max3(int left, int middle, int right) {
-    int max = 0;
-    if (left > middle && left > right) {max = left;}
-    if (middle > left && middle > right){max = middle;}
-    if (right > middle && right > left) {max = right;}
-    return max;
+    int max_ = left;
+    if (middle > max_ ) {max_ = middle;}
+    if (right > max_ ) {max_ = middle;}
+    return max_;
   }
 
   // Task 4
-  int *swap_args(int *left, int *right) {
-    if (left == nullptr || right == nullptr){
-      return (left, right);
-    } else {
-      int temp_left = *left;
-      *left = *right;
-      *right = temp_left;
-    }
+  void swap_args(int *left, int *right) {
+    int temp_left = *left;
+    *left = *right;
+    *right = temp_left;
   }
 
   // Task 5
