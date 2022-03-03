@@ -19,10 +19,7 @@ namespace assignment {
 
   // Task 3
   int max3(int left, int middle, int right) {
-    int max_ = left;
-    if (middle > max_ ) {max_ = middle;}
-    if (right > max_ ) {max_ = middle;}
-    return max_;
+    return left>middle?left>right?left:right:middle>right?middle:right;
   }
 
   // Task 4
