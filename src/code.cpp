@@ -38,7 +38,7 @@ namespace assignment {
     for(int i = 0; i < length; i++) {
       Summa += arr[i];
     }
-    return 0;
+    return Summa;
   }
 
   // Task 6
