@@ -60,8 +60,10 @@ namespace assignment {
   // Task 7
   int *allocate_arr(int length, int init_value) {
     if (length > 0) {
-
-    }
+      int* arr = new int[length];
+      std::fill(arr, arr + length, init_value);
+      return arr;
+      }
 
     return nullptr;
   }
@@ -78,8 +80,26 @@ namespace assignment {
 
   // Task 9
   void print_kth_elements(int *arr, int length, int k, std::ostream &os) {
+    if (length <= 0) {
+       os << "Invalid argument: length\\n";
+    }
+    else if (arr == nullptr) {
+      os << "Invalid argument: arr\n";
+    }
+    else if (k <= 0) {
+      os << "Invalid argument: k\n";
+    }
+    else if (length > 0 && arr != nullptr && k > 0) {
+      for (int i = 0; i < length; i++) {
+        if (k == 1) {
+          os << arr[i] << '\t';
+        }
+        else if (i % k == 0) {
+          os << arr[i] << '\t';
+        }
+      }
+    }
 
-    // Write your code here ...
   }
 
 }  // namespace assignment
